@@ -1,24 +1,13 @@
-
 # Node.js Test Runner
 
 Documentation: https://nodejs.org/api/test.html
 
 Create a test file in this directory with the name `*.js`.
 
-
-
 ## Template
 
 ```js
-const semver = require("semver");
-let test;
-const nodeVersion = process.versions.node;
-if (semver.satisfies(nodeVersion, ">= 18")) {
-    test = require("node:test");
-} else {
-    test = require("test");
-}
-
+const test = require("node:test");
 const assert = require("node:assert");
 
 test("Test name", async (t) => {
@@ -26,16 +15,8 @@ test("Test name", async (t) => {
 });
 ```
 
-## Run 
-
-Node.js >=18
+## Run
 
 ```bash
-npm run test-backend:18
-```
-
-Node.js < 18
-
-```bash
-npm run test-backend:14
+npm run test-backend
 ```
